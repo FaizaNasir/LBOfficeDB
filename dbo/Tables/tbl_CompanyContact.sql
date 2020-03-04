@@ -35,6 +35,8 @@
     [CompanyCurrencies]             INT             NULL,
     [LPTypeID]                      INT             NULL,
     [AccountName]                   NVARCHAR (1000) NULL,
+    [CreatedBy] NVARCHAR(1000) NULL, 
+    [ModifiedBy] NVARCHAR(1000) NULL, 
     CONSTRAINT [PK_tbl_CompanyContact] PRIMARY KEY CLUSTERED ([CompanyContactID] ASC)
 );
 
