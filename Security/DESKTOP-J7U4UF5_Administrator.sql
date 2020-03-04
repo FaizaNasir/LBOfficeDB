@@ -1,0 +1,2 @@
+﻿CREATE USER [DESKTOP-J7U4UF5\Administrator] FOR LOGIN [DESKTOP-J7U4UF5\Administrator];
+

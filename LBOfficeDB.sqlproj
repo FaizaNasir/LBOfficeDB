@@ -1,0 +1,1428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>LBOfficeDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0e826395-ea92-4359-ab41-a07bec09613f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>LBOfficeDB</RootNamespace>
+    <AssemblyName>LBOfficeDB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\tbl_VehicleHeadquarter.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioDebtSecurities.sql" />
+    <Build Include="dbo\Tables\tbl_FundNavDetails.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyOffice.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleHurdleRate.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioEnterprise.sql" />
+    <Build Include="dbo\Tables\tbl_FundReportingFrequency.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyOptional.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleLegal.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFollowOnPayment.sql" />
+    <Build Include="dbo\Tables\tbl_FundShare.sql" />
+    <Build Include="dbo\Tables\tbl_companyOptionalBis.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleLegalCompany.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundGeneralOperation.sql" />
+    <Build Include="dbo\Tables\tbl_FundShareSequence.sql" />
+    <Build Include="dbo\Tables\tbl_FundTypes.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyOptionalBis_EconomicBeneficiaries.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleManagement.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundGeneralOperationType.sql" />
+    <Build Include="dbo\Tables\tbl_GeographicalRegion.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyOptionalBis_Fund.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleManagementFee.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundKeyFigure.sql" />
+    <Build Include="dbo\Tables\tbl_HoldingDepartment.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyRevenuesByGeography.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundKeyFigureConfig.sql" />
+    <Build Include="dbo\Tables\tbl_HoldingDepartments.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyRevenuesByProduct.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleNavDetails.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundLegal.sql" />
+    <Build Include="dbo\Tables\tbl_IndividualComments.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyRevenuesByService.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleNavLimitedPartner.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundNav.sql" />
+    <Build Include="dbo\Tables\tbl_IndividualContactExternalAdvisors.sql" />
+    <Build Include="dbo\Tables\tbl_ContactIndividual.sql" />
+    <Build Include="dbo\Tables\tbl_VehiclePortfolioFund.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundUnderlyingInvestments.sql" />
+    <Build Include="dbo\Tables\tbl_IndividualContactTypes.sql" />
+    <Build Include="dbo\Tables\tbl_ContactIndividual_Fund.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleQuarterlyUpdates.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioFundUnderlyingInvestmentsTrimester.sql" />
+    <Build Include="dbo\Tables\tbl_Individualuser.sql" />
+    <Build Include="dbo\Tables\tbl_ContactIndividualContactTypes.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleRatio.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioGeneralOperation.sql" />
+    <Build Include="dbo\Tables\tbl_InnovativeCriteria.sql" />
+    <Build Include="dbo\Tables\tbl_ContactIndividualOptional.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleReport.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioGeneralOperationType.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteAssetTypePerferenceDetails.sql" />
+    <Build Include="dbo\Tables\tbl_ContactIndividualRM.sql" />
+    <Build Include="dbo\Tables\tbl_vehicleshare.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioKeyFigure.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteAssetTypePerferenceTransactionTypeDetail.sql" />
+    <Build Include="dbo\Tables\tbl_ContactType.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleShareDetail.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioLegal.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteAssetTypePreference.sql" />
+    <Build Include="dbo\Tables\tbl_ContactTypePermission.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyAssetType.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioLegalContactIndividual.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteGeographyCountry.sql" />
+    <Build Include="dbo\Tables\tbl_Contenents.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyCountry.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioLegalEvent.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteGeographyRegion.sql" />
+    <Build Include="dbo\Tables\tbl_Country.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyDealType.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioLegalStructure.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioOptional.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteSectorPreference.sql" />
+    <Build Include="dbo\Tables\tbl_Currency.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyFinancialInstrument.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioSecurity.sql" />
+    <Build Include="dbo\Tables\tbl_InterestAppetiteSizePreference.sql" />
+    <Build Include="dbo\Tables\tbl_Currency_new.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyPortfolioSize.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioSecurityClass.sql" />
+    <Build Include="dbo\Tables\tbl_InterestGeoghraphyCountryDetail.sql" />
+    <Build Include="dbo\Tables\tbl_DealBusiness.sql" />
+    <Build Include="dbo\Tables\aspnet_Applications.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategyRegion.sql" />
+    <Build Include="dbo\Tables\tbl_DealBusinessClients.sql" />
+    <Build Include="dbo\Tables\aspnet_Membership.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioSecurityType.sql" />
+    <Build Include="dbo\Tables\tbl_InterestGeoghraphyRegionDetail.sql" />
+    <Build Include="dbo\Tables\tbl_DealBusinessCompetitors.sql" />
+    <Build Include="dbo\Tables\aspnet_Paths.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleStrategySector.sql" />
+    <Build Include="dbo\Tables\tbl_DealCompany.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationAllUsers.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioShareholdingOperations.sql" />
+    <Build Include="dbo\Tables\tbl_InterestGeographyCountryTransactionTypeDetail.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleTeam.sql" />
+    <Build Include="dbo\Tables\tbl_DealFee.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationPerUser.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioShareholdingOperationsUnderConditions.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleNav.sql" />
+    <Build Include="dbo\Tables\tbl_InterestGeographyRegionTransactionTypeDetail.sql" />
+    <Build Include="dbo\Tables\aspnet_Profile.sql" />
+    <Build Include="dbo\Tables\tbl_DealFundInvestors.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioShareholdingTypeofOperation.sql" />
+    <Build Include="dbo\Tables\tbl_InterestPortfolioDirectDeal.sql" />
+    <Build Include="dbo\Tables\aspnet_Roles.sql" />
+    <Build Include="dbo\Tables\tbl_DealFundInvestorStatus.sql" />
+    <Build Include="dbo\Tables\aspnet_SchemaVersions.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioSimulation.sql" />
+    <Build Include="dbo\Tables\tbl_InterestPortfolioFund.sql" />
+    <Build Include="dbo\Tables\tbl_DealFundNegativeInvestor.sql" />
+    <Build Include="dbo\Tables\aspnet_Users.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioSimulationDetail.sql" />
+    <Build Include="dbo\Tables\tbl_InvestmentMode.sql" />
+    <Build Include="dbo\Tables\aspnet_UsersInRoles.sql" />
+    <Build Include="dbo\Tables\tbl_DealIntroductionWith.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioTransactionStructure.sql" />
+    <Build Include="dbo\Tables\tbl_InvestmentType.sql" />
+    <Build Include="dbo\Tables\aspnet_WebEvent_Events.sql" />
+    <Build Include="dbo\Tables\tbl_DealInvestmentBackground.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioValuation.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorBankInvestmentType.sql" />
+    <Build Include="dbo\Tables\FundExcelInputDetail.sql" />
+    <Build Include="dbo\Tables\tbl_DealInvestmentType.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioValuationDetails.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorBankInvestmentTypes.sql" />
+    <Build Include="dbo\Tables\FundExcelInputMaster.sql" />
+    <Build Include="dbo\Tables\tbl_DealInvestorType.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioValuationMethod.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorBankSource.sql" />
+    <Build Include="dbo\Tables\FundExcelOutput.sql" />
+    <Build Include="dbo\Tables\tbl_DealOfficePermission.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioValuationType.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorBusinessArea.sql" />
+    <Build Include="dbo\Tables\KYCChecklistConfig.sql" />
+    <Build Include="dbo\Tables\tbl_DealOptionalDetails.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioVariableRate.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorBusinessAreaPreferences.sql" />
+    <Build Include="dbo\Tables\KYCChecklistObject.sql" />
+    <Build Include="dbo\Tables\tbl_DealOwnership.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioVehicle.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorType.sql" />
+    <Build Include="dbo\Tables\Tally.sql" />
+    <Build Include="dbo\Tables\tbl_Deals.sql" />
+    <Build Include="dbo\Tables\tbl_Activities.sql" />
+    <Build Include="dbo\Tables\tbl_Quotation.sql" />
+    <Build Include="dbo\Tables\tbl_InvestorTypeDetail.sql" />
+    <Build Include="dbo\Tables\tbl_DealSecurity.sql" />
+    <Build Include="dbo\Tables\tbl_AlertInterval.sql" />
+    <Build Include="dbo\Tables\tbl_Region.sql" />
+    <Build Include="dbo\Tables\tbl_KeyfigureConfig.sql" />
+    <Build Include="dbo\Tables\tbl_DealSecurityType.sql" />
+    <Build Include="dbo\Tables\tbl_AssetTypePerference.sql" />
+    <Build Include="dbo\Tables\tbl_SectorPerference.sql" />
+    <Build Include="dbo\Tables\tbl_Language.sql" />
+    <Build Include="dbo\Tables\tbl_DealShareholdingType.sql" />
+    <Build Include="dbo\Tables\tbl_AssociatedLP.sql" />
+    <Build Include="dbo\Tables\tbl_SectorPerferenceDetails.sql" />
+    <Build Include="dbo\Tables\tbl_LegalTypeVehicle.sql" />
+    <Build Include="dbo\Tables\tbl_DealSimulation.sql" />
+    <Build Include="dbo\Tables\tbl_BlockedGroupPermission.sql" />
+    <Build Include="dbo\Tables\tbl_SectorPerferenceType.sql" />
+    <Build Include="dbo\Tables\tbl_LimitedPartner.sql" />
+    <Build Include="dbo\Tables\tbl_DealSource.sql" />
+    <Build Include="dbo\Tables\tbl_BlockedPermission.sql" />
+    <Build Include="dbo\Tables\tbl_SectorPerferenceTypeDetail.sql" />
+    <Build Include="dbo\Tables\tbl_LimitedPartnerDetail.sql" />
+    <Build Include="dbo\Tables\tbl_DealSourceType.sql" />
+    <Build Include="dbo\Tables\tbl_BusinessArea.sql" />
+    <Build Include="dbo\Tables\tbl_ShareholderCompliant.sql" />
+    <Build Include="dbo\Tables\tbl_LPEmailConfig.sql" />
+    <Build Include="dbo\Tables\tbl_DealStageApproval.sql" />
+    <Build Include="dbo\Tables\tbl_BusinessAreaBU.sql" />
+    <Build Include="dbo\Tables\tbl_Shareholders.sql" />
+    <Build Include="dbo\Tables\tbl_LPEmailConfigDetail.sql" />
+    <Build Include="dbo\Tables\tbl_CapitalCall.sql" />
+    <Build Include="dbo\Tables\tbl_ShareholdersOwnedTotal.sql" />
+    <Build Include="dbo\Tables\tbl_DealStagePermission.sql" />
+    <Build Include="dbo\Tables\tbl_ShareholdersOwned.sql" />
+    <Build Include="dbo\Tables\tbl_LPPerformance.sql" />
+    <Build Include="dbo\Tables\tbl_CapitalCallLimitedPartner.sql" />
+    <Build Include="dbo\Tables\tbl_LPReport.sql" />
+    <Build Include="dbo\Tables\tbl_DealStages.sql" />
+    <Build Include="dbo\Tables\tbl_ShareholdersOwnedDate.sql" />
+    <Build Include="dbo\Tables\tbl_CapitalCallOperation.sql" />
+    <Build Include="dbo\Tables\tbl_LPTemlateConfigStaticDocs.sql" />
+    <Build Include="dbo\Tables\tbl_DealStatus.sql" />
+    <Build Include="dbo\Tables\tbl_State.sql" />
+    <Build Include="dbo\Tables\tbl_CapitalCallPortfolioCompany.sql" />
+    <Build Include="dbo\Tables\tbl_LPTemplateConfig.sql" />
+    <Build Include="dbo\Tables\tbl_DealStatusBU.sql" />
+    <Build Include="dbo\Tables\tbl_SubVehicles.sql" />
+    <Build Include="dbo\Tables\tbl_DealStatusDetails.sql" />
+    <Build Include="dbo\Tables\tbl_CapitalCallShareDetail.sql" />
+    <Build Include="dbo\Tables\tbl_LPTemplateConfigDetail.sql" />
+    <Build Include="dbo\Tables\tbl_TabsPermission.sql" />
+    <Build Include="dbo\Tables\tbl_DealTarget.sql" />
+    <Build Include="dbo\Tables\tbl_City.sql" />
+    <Build Include="dbo\Tables\tbl_MeetingLinkedTo.sql" />
+    <Build Include="dbo\Tables\tbl_TaskDuration.sql" />
+    <Build Include="dbo\Tables\tbl_DealTeam.sql" />
+    <Build Include="dbo\Tables\tbl_Commitment.sql" />
+    <Build Include="dbo\Tables\tbl_Meetings.sql" />
+    <Build Include="dbo\Tables\tbl_CommitmentFundShare.sql" />
+    <Build Include="dbo\Tables\tbl_TaskLinked.sql" />
+    <Build Include="dbo\Tables\tbl_DealTransectionType.sql" />
+    <Build Include="dbo\Tables\tbl_CommitmentTransfer.sql" />
+    <Build Include="dbo\Tables\tbl_MeetingType.sql" />
+    <Build Include="dbo\Tables\tbl_Tasks.sql" />
+    <Build Include="dbo\Tables\tbl_DealType.sql" />
+    <Build Include="dbo\Tables\tbl_CommitmentTransferContext.sql" />
+    <Build Include="dbo\Tables\tbl_Module_Sub_Tabs.sql" />
+    <Build Include="dbo\Tables\tbl_TeamType.sql" />
+    <Build Include="dbo\Tables\tbl_DealTypeActivity.sql" />
+    <Build Include="dbo\Tables\tbl_CommitmentTransferFundShare.sql" />
+    <Build Include="dbo\Tables\tbl_Module_Sub_TabsBU.sql" />
+    <Build Include="dbo\Tables\tbl_temp.sql" />
+    <Build Include="dbo\Tables\tbl_Module_Tabs.sql" />
+    <Build Include="dbo\Tables\tbl_DealVehicle.sql" />
+    <Build Include="dbo\Tables\tbl_Committee.sql" />
+    <Build Include="dbo\Tables\tbl_TransactionStructure.sql" />
+    <Build Include="dbo\Tables\tbl_Module_TabsBU.sql" />
+    <Build Include="dbo\Tables\tbl_DealVehicleEligibility.sql" />
+    <Build Include="dbo\Tables\tbl_CommitteeAttendies.sql" />
+    <Build Include="dbo\Tables\tbl_TypeDeDeal.sql" />
+    <Build Include="dbo\Tables\tbl_ModuleObjectPermissions.sql" />
+    <Build Include="dbo\Tables\tbl_DealWorkingTeam.sql" />
+    <Build Include="dbo\Tables\tbl_CommitteeType.sql" />
+    <Build Include="dbo\Tables\tbl_UserLog.sql" />
+    <Build Include="dbo\Tables\tbl_ModuleObjectPermissionsBU.sql" />
+    <Build Include="dbo\Tables\tbl_Modules.sql" />
+    <Build Include="dbo\Tables\tbl_DefaultParameters.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyBusinessUpdates.sql" />
+    <Build Include="dbo\Tables\tbl_VariableRate.sql" />
+    <Build Include="dbo\Tables\tbl_ModulesBU.sql" />
+    <Build Include="dbo\Tables\tbl_Distribution.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyClients.sql" />
+    <Build Include="dbo\Tables\tbl_Vehicle.sql" />
+    <Build Include="dbo\Tables\tbl_MultiCurrencyRate.sql" />
+    <Build Include="dbo\Tables\tbl_DistributionLimitedPartner.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyCompetitors.sql" />
+    <Build Include="dbo\Tables\tbl_Vehicle_Strategy_Investment_Criteria.sql" />
+    <Build Include="dbo\Tables\tbl_Nationality.sql" />
+    <Build Include="dbo\Tables\tbl_DistributionOperation.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyContact.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleActivity.sql" />
+    <Build Include="dbo\Tables\tbl_Office.sql" />
+    <Build Include="dbo\Tables\tbl_DistributionPortfolioCompany.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyContact_FundStrategy.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleBankDetails.sql" />
+    <Build Include="dbo\Tables\tbl_OutlookContactSync.sql" />
+    <Build Include="dbo\Tables\tbl_DocumentType.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyContact_FundType.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleCarriedIntreset.sql" />
+    <Build Include="dbo\Tables\tbl_OutlookEmail.sql" />
+    <Build Include="dbo\Tables\tbl_Eligibility.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyContactExternalAdvisors.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleCash.sql" />
+    <Build Include="dbo\Tables\tbl_OutlookEmailLinkedTo.sql" />
+    <Build Include="dbo\Tables\tbl_EligibilityInnovativeCriteria.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyContactType.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleCatchUp.sql" />
+    <Build Include="dbo\Tables\tbl_OutlookMeeting.sql" />
+    <Build Include="dbo\Tables\tbl_EligibilityRegion.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyExternalAdvisorTypes.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleClosing.sql" />
+    <Build Include="dbo\Tables\tbl_PortalUser.sql" />
+    <Build Include="dbo\Tables\tbl_ErrorLog.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyFundStrategy.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleDocumentType.sql" />
+    <Build Include="dbo\Tables\tbl_Portfolio.sql" />
+    <Build Include="dbo\Tables\tbl_EventAttendies.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyFundType.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleEligibility.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioCompliance.sql" />
+    <Build Include="dbo\Tables\tbl_FinancialInstrument.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyIndividuals.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleEligibilityRegion.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioDealTeam.sql" />
+    <Build Include="dbo\Tables\tbl_FundBusinessAreaAllocation.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyIndustries.sql" />
+    <Build Include="dbo\Tables\tbl_VehicleEligibilityType.sql" />
+    <Build Include="dbo\Tables\tbl_PortfolioDebtCovenant.sql" />
+    <Build Include="dbo\Tables\tbl_FundDistributionSequence.sql" />
+    <Build Include="dbo\Tables\tbl_FundNav.sql" />
+    <Build Include="dbo\Tables\tbl_CompanyInterest.sql" />
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_Shared.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_User.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_ContactIndividualsWithCompanyContacts.sql" />
+    <Build Include="dbo\Views\vw_DealFlow_List.sql" />
+    <Build Include="dbo\Views\vw_dealParties.sql" />
+    <Build Include="dbo\Views\vw_aspnet_Applications.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_MembershipUsers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Profiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Roles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Users.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_UsersInRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_Paths.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_Portfolio_StillIn_FundOne.sql" />
+    <Build Include="dbo\Views\vw_PowerBI_Deal.sql" />
+    <Build Include="dbo\Views\vw_tbl_Country.sql" />
+    <Build Include="Security\LBOFFICE_davigold.sql" />
+    <Build Include="Security\LBOFFICE_aims.sql" />
+    <Build Include="Security\davigold.sql" />
+    <Build Include="Security\NT Service_MSSQLSERVER.sql" />
+    <Build Include="Security\NT Service_MSSQLSERVER_1.sql" />
+    <Build Include="Security\NT AUTHORITY_LOCAL SERVICE.sql" />
+    <Build Include="Security\NT AUTHORITY_NETWORK SERVICE.sql" />
+    <Build Include="Security\NT AUTHORITY_SYSTEM.sql" />
+    <Build Include="Security\NT AUTHORITY_SYSTEM_1.sql" />
+    <Build Include="Security\NT SERVICE_SQLSERVERAGENT.sql" />
+    <Build Include="Security\NT SERVICE_SQLSERVERAGENT_1.sql" />
+    <Build Include="Security\NT SERVICE_SQLWriter.sql" />
+    <Build Include="Security\NT SERVICE_SQLWriter_1.sql" />
+    <Build Include="Security\NT SERVICE_Winmgmt.sql" />
+    <Build Include="Security\NT SERVICE_Winmgmt_1.sql" />
+    <Build Include="Security\spdev.sql" />
+    <Build Include="Security\DESKTOP-J7U4UF5_Administrator.sql" />
+    <Build Include="Security\DESKTOP-J7U4UF5_Administrator_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\F_GetPortfolioVehicle.sql" />
+    <Build Include="dbo\Functions\F_GetReceivedDistributions.sql" />
+    <Build Include="dbo\Functions\F_GetSponserFund.sql" />
+    <Build Include="dbo\Functions\F_GetStageBeforeLastStage.sql" />
+    <Build Include="dbo\Functions\F_GetTaskAttendees.sql" />
+    <Build Include="dbo\Functions\F_GetVehicleLegalCompany.sql" />
+    <Build Include="dbo\Functions\F_GetVehicleRegionRatio.sql" />
+    <Build Include="dbo\Functions\F_Innovativecriteria.sql" />
+    <Build Include="dbo\Functions\F_KeyFigure_EBITDAMargin.sql" />
+    <Build Include="dbo\Functions\F_KeyFigure_GrowthR.sql" />
+    <Build Include="dbo\Functions\F_KeyFigure_Per.sql" />
+    <Build Include="dbo\Functions\F_GetParentPortfolioid.sql" />
+    <Build Include="dbo\Functions\F_KeyFigures_HeaderDate.sql" />
+    <Build Include="dbo\Functions\F_ClosingDateV1.sql" />
+    <Build Include="dbo\Functions\F_Last_Valuation.sql" />
+    <Build Include="dbo\Functions\F_Last_Valuation_ForeginCurrency.sql" />
+    <Build Include="dbo\Functions\F_Last_ValuationBySecurity.sql" />
+    <Build Include="dbo\Functions\F_LPEmailConfigDetail.sql" />
+    <Build Include="dbo\Functions\F_LPOwenPercentage.sql" />
+    <Build Include="dbo\Functions\CostOfSoldInvst_ExcelReport.sql" />
+    <Build Include="dbo\Functions\F_LPTotalCommitment.sql" />
+    <Build Include="dbo\Functions\CostOfSoldInvst_Report.sql" />
+    <Build Include="dbo\Functions\F_NonDiluted.sql" />
+    <Build Include="dbo\Functions\F_BeforeLast_Valuation.sql" />
+    <Build Include="dbo\Functions\F_NonDiluted_Report.sql" />
+    <Build Include="dbo\Functions\F_BeforeLast_Valuation_Date.sql" />
+    <Build Include="dbo\Functions\F_Portfolio_Shareholder_ByPortfolio.sql" />
+    <Build Include="dbo\Functions\F_BeforeLast_Valuation_Method.sql" />
+    <Build Include="dbo\Functions\F_BeforeLast_Valuation_Note.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_AdjEPSN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_AdjEPSN-2.sql" />
+    <Build Include="dbo\Functions\F_PortfolioDealTeam.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_AdjEPSN-3.sql" />
+    <Build Include="dbo\Functions\F_PortfolioLegalIndividualName.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_Diluted.sql" />
+    <Build Include="dbo\Functions\F_Quartervariation.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBIT.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBIT-3.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs_Excel.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBITDAN-1.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs_Updated.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBITDAN-2.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs_Updated_Report.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBITDAN-3.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs_Updated_SecurityWise.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBITN-1.sql" />
+    <Build Include="dbo\Functions\F_Sho_GetCostOfSoldInvs_WithOutEligibility.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_EBITN-2.sql" />
+    <Build Include="dbo\Functions\F_Sold.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_FCFN-1.sql" />
+    <Build Include="dbo\Functions\F_SumOfAmountInvested_ByFund_PortfolioGrid.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_FCFN-2.sql" />
+    <Build Include="dbo\Functions\F_Voting.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_FCFN-3.sql" />
+    <Build Include="dbo\Functions\F_YearN.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_GearingN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_GearingN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_GearingN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastAdjEPS.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastEBIT.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastEBITDA.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastFCF.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastFinancialDebt.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastFinancialDebtN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastFinancialDebtN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastFinancialDebtN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastGearing.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetDebt.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetdebt_EBITDA.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetDebtN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetDebtN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetDebtN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetProfit.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetProfitN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetProfitN-2.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_InvestedAmount.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastNetProfitN-3.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_FundPer.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastTurnover.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_TotalAmountCashedInOut.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastTurnoverN-1.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_CurrentValuation.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastTurnoverN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastTurnoverN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastWorkforce.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastWorkforceN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastWorkforceN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_LastWorkforceN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_Netdebt_EBITDAN-1.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_Netdebt_EBITDAN-2.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_Netdebt_EBITDAN-3.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_NonDiluted.sql" />
+    <Build Include="dbo\Functions\F_capitaltable_Report.sql" />
+    <Build Include="dbo\Functions\F_CapitalTable_VotingRatio.sql" />
+    <Build Include="dbo\Functions\F_CheckDealPortfolioLink.sql" />
+    <Build Include="dbo\Functions\F_CheckMeetingPrivacyByCompany.sql" />
+    <Build Include="dbo\Functions\F_CheckMeetingPrivacyByIndividual.sql" />
+    <Build Include="dbo\Functions\F_CheckTaskPrivacyByCompany.sql" />
+    <Build Include="dbo\Functions\F_CheckTaskPrivacyByIndividual.sql" />
+    <Build Include="dbo\Functions\F_ClosingDate.sql" />
+    <Build Include="dbo\Functions\F_ClosingDate_bk.sql" />
+    <Build Include="dbo\Functions\F_ClosingDateMultipleFund.sql" />
+    <Build Include="dbo\Functions\F_ContactNationality.sql" />
+    <Build Include="dbo\Functions\F_DealSearchOperator.sql" />
+    <Build Include="dbo\Functions\F_DealTeamMember.sql" />
+    <Build Include="dbo\Functions\F_Diluted.sql" />
+    <Build Include="dbo\Functions\F_EligibilityRegion.sql" />
+    <Build Include="dbo\Functions\F_GetActivityName.sql" />
+    <Build Include="dbo\Functions\F_GetAdjustedNav.sql" />
+    <Build Include="dbo\Functions\F_GetAdjustedNav_V1.sql" />
+    <Build Include="dbo\Functions\F_GetCapitalCallUnCalledCommitmentsLP.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyAddress.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyMainContact.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyMainContactID.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyMainContactIDBusinessEmail.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyMainContactPosition.sql" />
+    <Build Include="dbo\Functions\F_GetCompanyTypeNames.sql" />
+    <Build Include="dbo\Functions\F_GetContactNationality.sql" />
+    <Build Include="dbo\Functions\F_GetContactRM.sql" />
+    <Build Include="dbo\Functions\F_GetContactTypeNames.sql" />
+    <Build Include="dbo\Functions\F_GetCostPrice.sql" />
+    <Build Include="dbo\Functions\F_GetCostPriceDisplay.sql" />
+    <Build Include="dbo\Functions\F_GetDatedNAV.sql" />
+    <Build Include="dbo\Functions\F_GetDatedNAV_V1.sql" />
+    <Build Include="dbo\Functions\F_GetDealCompany.sql" />
+    <Build Include="dbo\Functions\F_GetDealFund.sql" />
+    <Build Include="dbo\Functions\F_GetDealNegativeList.sql" />
+    <Build Include="dbo\Functions\F_ClosingDateExit.sql" />
+    <Build Include="dbo\Functions\F_GetDealStageApproval.sql" />
+    <Build Include="dbo\Functions\F_GetDealTaskExternalAdvisor.sql" />
+    <Build Include="dbo\Functions\F_GetDealTeam.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_CurrentCostValue.sql" />
+    <Build Include="dbo\Functions\F_GetDealVehicle.sql" />
+    <Build Include="dbo\Functions\F_GetFQRPortfolioGrid_CostOfSecurity.sql" />
+    <Build Include="dbo\Functions\F_GetDealWorkingTeam.sql" />
+    <Build Include="dbo\Functions\f_GetEligibileFund.sql" />
+    <Build Include="dbo\Functions\F_GetEnterpriseValue.sql" />
+    <Build Include="dbo\Functions\F_GetEnterpriseValue_V1.sql" />
+    <Build Include="dbo\Functions\F_GetKeyFigureValue.sql" />
+    <Build Include="dbo\Functions\F_GetKeyFigureYears.sql" />
+    <Build Include="dbo\Functions\F_GetLastValuation.sql" />
+    <Build Include="dbo\Functions\F_GetLastValuationAsOf.sql" />
+    <Build Include="dbo\Functions\F_GetLinkToCompanyByMeetingID.sql" />
+    <Build Include="dbo\Functions\F_GetLinkToCompanyByTaskID.sql" />
+    <Build Include="dbo\Functions\F_GetLinkToDealByTaskID.sql" />
+    <Build Include="dbo\Functions\F_GetLPEmailConfigDetail.sql" />
+    <Build Include="dbo\Functions\F_GetMeetingAttendees.sql" />
+    <Build Include="dbo\Functions\F_GetMeetingMCMembers_OtherContact.sql" />
+    <Build Include="dbo\Functions\F_GetMultiCurrency.sql" />
+    <Build Include="dbo\Functions\F_GetNetAssetValue.sql" />
+    <Build Include="dbo\Functions\F_GetNetFinancialDebt.sql" />
+    <Build Include="dbo\Functions\F_GetObjectModuleName.sql" />
+    <Build Include="dbo\Functions\F_GetObjectModuleName_V1.sql" />
+    <Build Include="dbo\Functions\F_GetObjectName.sql" />
+    <Build Include="dbo\Functions\F_GetOriginValue.sql" />
+    <Build Include="dbo\Functions\F_GetPartLiqVal.sql" />
+    <Build Include="dbo\Functions\F_GetPortfolioLegalCapital.sql" />
+    <Build Include="dbo\Functions\F_GetPortfolioValuationSecurity.sql" />
+    <Build Include="dbo\Functions\F_PortfolioCal.sql" />
+    <Build Include="dbo\Functions\F_PortfolioCal_bk.sql" />
+    <Build Include="dbo\Functions\F_PortfolioCal_ForeginCurrency.sql" />
+    <Build Include="dbo\Functions\FnGetHoldingCompanies.sql" />
+    <Build Include="dbo\Functions\FnSplit.sql" />
+    <Build Include="dbo\Functions\SplitCSV.sql" />
+    <Build Include="dbo\Functions\F_CheckEligibility.sql" />
+    <Build Include="dbo\Functions\F_CostOfSolInvs.sql" />
+    <Build Include="dbo\Functions\DelimitedSplit8K.sql" />
+    <Build Include="dbo\Functions\DelimitedSplit8K_KeyFigure.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getPortfolioByKey.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_divestshare_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleManagementFee.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateDealStage.sql" />
+    <Build Include="dbo\Stored Procedures\BI_Deals.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioSecurity_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getPortfolioFundKeyFigureSimulations.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_divestshare_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateLPConfigCapitalCall.sql" />
+    <Build Include="dbo\Stored Procedures\BI_Deals_JS.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioSecurityClass_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetPortfolioInfoByIsin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Eligibility_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Getvehiclenavlimitedpartner.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateLPConfigCAS.sql" />
+    <Build Include="dbo\Stored Procedures\BI_Individual.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioStill.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetPortfolioSecurityGrid.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Eligibility_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleNavLimitedPartner_Portal.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateLPConfigDistribution.sql" />
+    <Build Include="dbo\Stored Procedures\BI_LP.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioStill2.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetPortfolioShareholdingOperations.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityInnovativeCriteria_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleNAVLimitedPartnerByTransfers.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateLPDistributionTeamContacts.sql" />
+    <Build Include="dbo\Stored Procedures\BI_Portfolio_V2.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioStill3.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetTaskAlert.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityInnovativeCriteria_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleReport.sql" />
+    <Build Include="dbo\Stored Procedures\ValidateLpTemplateConfig.sql" />
+    <Build Include="dbo\Stored Procedures\CalculateAndInsertDistributionLimitedPartner.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuation_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetUserAlertTask.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityInnovativeCriteria_SET.sql" />
+    <Build Include="dbo\Stored Procedures\ILPAPortfolioReport.sql" />
+    <Build Include="dbo\Stored Procedures\CalculateAndInsertVehicleNavLimitedPartner.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetValuation_Report.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityRegion_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\ILPAPortfolioReport_Geography.sql" />
+    <Build Include="dbo\Stored Procedures\CleanMe.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuation_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetValuation_Report_Chart.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityRegion_GET.sql" />
+    <Build Include="dbo\Stored Procedures\ILPAPortfolioReport_Product.sql" />
+    <Build Include="dbo\Stored Procedures\dbo_proc_portfolio_Vehicle_Report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuationGrid.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetVehicleByCompanyID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EligibilityRegion_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Activities_ByTargetPortfolioType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteBlockedGroupPermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuationSecurity_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetVehicleRegionRatio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Events_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AlertInterval_Get.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteCapitalCallChildDetailsByCapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuationSecurityDetails_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetVehicleShareHoldingRatio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EventsByCompany_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AlertsReport.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteCapitalCallLimitedPartnerByCapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuationSecurityDetails_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IBMultiple.sql" />
+    <Build Include="dbo\Stored Procedures\proc_EventsByIndividual_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_All_Task_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteCapitalCallWithChildDetailsByCapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioValuationSecurityDetails_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualCommentsByIndividualId_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_excel_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_AssetType_Preference_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteCompany.sql" />
+    <Build Include="dbo\Stored Procedures\proc_portfolioweight.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualCompanyAssignTeam_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_excelpluginshareholdingopertions_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_BI_Deal.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteContactIndividual.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PowerBIMultiple.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualContact_SearchByType_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ExitsGrid_ExportExcel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_BIDividend_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteDeals.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ProtfolioFund_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualContactOptional_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ExternalAdvisorAll_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_BIPaidInterest_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteDistributionChildDetailsByDistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Quotation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualContactTypes_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Financial_Instrument_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_BIPerformance.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteDistributionLimitedPartnerByDistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Region_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualSearch_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Distribution_Sequence_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_bod_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteDistributionWithChildDetailsByDistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_CompanyByType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_IndividualSearchByFirstNameLastNameCompanyName_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_bod_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteFund.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_CompanyTeamDetails.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Individul_Type_Set.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Business_Area_GET.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteKeyfigureHistory.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Deal_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InnovativeCriteria_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Search.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_business_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteMeeting.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Deal_Fees.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InsertUpdateOutLookEmailLinkedTo.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Share_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_business_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteMultiCurrencyRate.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Deal_Investors.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_AssetType_Preference_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Share_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CalculateCapitalCallLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\DeletePortfolioCompany.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Deal_Party.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Country_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Share_Sequence_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CalculateDistributionLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundProfile.sql" />
+    <Build Include="dbo\Stored Procedures\DeletePortfolioSecurity.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Deal_Stage.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Country_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Share_Sequence_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CalculateVehicleRatio.sql" />
+    <Build Include="dbo\Stored Procedures\DeletePortfolioShareholdingOperations.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_OPCVM_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Country_Transaction_Type_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Simulation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CallReport_CompanyDetails_By_CompanyID.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteShareholders.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Portfolio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Region_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_AssetType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CallReport_IndividualDetails_By_IndividualID.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteTask.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Report_Portfolio_ForeginCurrency.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Region_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_Country_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CallReport_Meeting_By_Company.sql" />
+    <Build Include="dbo\Stored Procedures\finduser.sql" />
+    <Build Include="dbo\Stored Procedures\proc_reportparameterportfoliocompany_1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Geography_Region_Transaction_Type_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_DealType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CallReport_Meeting_By_Individual.sql" />
+    <Build Include="dbo\Stored Procedures\ftest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_reportparametersecurityname.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Sector_Preference_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_FinancialInstrument_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_capital_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\ftxt.sql" />
+    <Build Include="dbo\Stored Procedures\proc_reportshareholdingoperations_1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Appetite_Size_Preference_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_Investment_Criteria_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_capital_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_reportTest_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Portfolio_Direct_Deal_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_PortfolioSize_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CapitalCall_GET.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_2.sql" />
+    <Build Include="dbo\Stored Procedures\proc_RoleNameByUserName_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Portfolio_Fund_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_Region_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CapitalCall_GET_By_CapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_DealTeam.sql" />
+    <Build Include="dbo\Stored Procedures\proc_RolePermission_Del.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Interest_Portfolio_Vehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Fund_Strategy_Sector_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CapitalCallLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_KeyFigure.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Sector_Perference_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InterestAppetite_AssetType_Perference_Transaction_Type_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundActivity_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CapitalCallPortfolioCompany_GET_By_CapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_OPCVM.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Sector_Perference_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InterestAppetitue_AssetType_Perference_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundBankDetails_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_capitaltable_GET.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_Quotation.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Sector_Perference_Type_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_InvesteeCompany_ByVehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundCarriedIntreset_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_capitaltable_Report.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_SubReport_1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Sector_Perference_Type_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Investment_Type_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundCatchup_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_capitaltable_Values_GET.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_SubReport_1_FundWise.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Security_Types_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Investor_Type_Detail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundGeneralFees_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Chart_Deal_Size_By_Stage.sql" />
+    <Build Include="dbo\Stored Procedures\FundReport_SubReport_2.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SET_CompanyContactTypes.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Investor_Type_Detail_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundHurdleRate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Chart_Deal_Stage.sql" />
+    <Build Include="dbo\Stored Procedures\gcn.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SET_ContactTypePermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Investor_Type_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundManagementFees_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Chart_Total _Number_Deal.sql" />
+    <Build Include="dbo\Stored Procedures\GetAdjustedNav.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SET_Deal_Target.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_investshare_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundNav_GET.sql" />
+    <Build Include="dbo\Stored Procedures\getlogs.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Chart_Total_Deal_Closed_Forecast_Amount.sql" />
+    <Build Include="dbo\Stored Procedures\GetAdjustedNAVBySemester.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SET_Individualuser.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_investshare_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundNavDetails_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Chart_Total_Deal_Size.sql" />
+    <Build Include="dbo\Stored Procedures\GetAssociatedLP.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SET_ModuleObjectPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_kefigure_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundNavGrid.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Commitment_ByFundGET.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\GetBlockedGroupPermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SetErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_kefigure_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundNavShareCal_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Commitment_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetBlockedPermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholderCompliant_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_KeyfigureConfig_Del.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundOperationCapitalCall_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Commitment_FundShare_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetCASReport.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholderCompliant_Report.sql" />
+    <Build Include="dbo\Stored Procedures\proc_KeyfigureConfig_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundOperationLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Commitment_FundShare_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetCASReportDetail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholderCompliant_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_KeyfigureConfig_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundOperationPortfolio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Commitment_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetCommitments_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholdingOperation_FromAutoSuggest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LimitedPartner_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundOperations_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CommitmentTransfer_ByFundGET.sql" />
+    <Build Include="dbo\Stored Procedures\GetCommitmentsLimitedPartnerByTransfers.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholdingOperation_MaxNumber.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LimitedPartnerGrid_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundPerformance_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CommitmentTransfer_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanies_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ShareholdingOperation_ToAutoSuggest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LP_Del.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundQuarterlyUpdate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CommitmentTransfer_FundShare_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyIndividualOffice.sql" />
+    <Build Include="dbo\Stored Procedures\proc_State_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LP_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundRemainingAmount.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CommitmentTransfer_FundShare_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyInterest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Sub_Vehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LP_Grid.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundStrategy_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CommitmentTransfer_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyOffice.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SubFundGroups_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPCapitalAccountCapitalCall_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FundTeamMemberRole_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Companies_Report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetContacts_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_SubFunds_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPCapitalAccountDistribution_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FunRatio_Report.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Company_Teams_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetContactTeamAutosuggest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_TabsPermission_del.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPCapitalAccountLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_FunRatio_Report_Only.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContact_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetDeals_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_TabsPermission_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPCapitalAccountPerformance_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_general_search.sql" />
+    <Build Include="dbo\Stored Procedures\proc_companycontact_ExcelImport.sql" />
+    <Build Include="dbo\Stored Procedures\GetDistributionLimitedPartner.sql" />
+    <Build Include="dbo\Stored Procedures\proc_TabsPermission_set.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPDetail.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_generaloper_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContact_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetDistributionLimitedPartnerByTransfers.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Task_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_LPDetail_Get.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_generaloper_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContactAssignTeam_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleShare_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetExcelPortfolioFunds.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Task_Search.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ManagementCompanyDetails_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_all_deal_types.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContactFundStrategyGET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFQRChart1.sql" />
+    <Build Include="dbo\Stored Procedures\GetExcelUnderlyingInvestments.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Task_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ManagementCompanyUsers_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_all_link_to_companies_meeting.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContactFundTypeGET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFQRChart2.sql" />
+    <Build Include="dbo\Stored Procedures\GetExcelUnderlyingInvestmentsDetail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_TaskLinked_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Meeting_deal_committee_gets.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_all_link_to_companies_task.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContactIndividualContact_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleNavDetail.sql" />
+    <Build Include="dbo\Stored Procedures\GetFofOperation_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_TaskLinked_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Meeting_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_AllUserDetails.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyContactTypes_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GETFundExcelOutPutByFundID.sql" />
+    <Build Include="dbo\Stored Procedures\GetFoFPortfolio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Tasks_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Meeting_Search.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_City.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyExecutives_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_vehicleNav_get.sql" />
+    <Build Include="dbo\Stored Procedures\GETFundExcelCashFlowByFundID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_tbl_CapitalCallOperation_GET_By_CapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Meeting_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyContact.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyExternalAdvisorTypes_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFQRSmileyData.sql" />
+    <Build Include="dbo\Stored Procedures\GETFundExcelCashFlowByFundIDandShareID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_tbl_DistributionOperation_GET_By_DistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MeetingDetailsByDate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyContactOffices.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyFundStrategy_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportPortfolioOverView.sql" />
+    <Build Include="dbo\Stored Procedures\GETFundExcelInputByFundID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_UpdateDealStatus.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MeetingLinked_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyContactType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyFundType_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\GETFundExcelInputDataByFundIDAndShareID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_UpdateKeyFigures.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MeetingLinked_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyIdByCompanyName_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_updatePortfolioAmount.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MenuTabs_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyIndividuals.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyIndividual_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundGeneralOperationsFunds.sql" />
+    <Build Include="dbo\Stored Procedures\proc_UpdatePortfolioFundKeyFigures.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MulitExceptRatio_Get_Validation.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_CompanyIndividualsByCompany_Meeting.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyIndividualByRoleID_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportChartRegion.sql" />
+    <Build Include="dbo\Stored Procedures\proc_updatePortfolioStatus.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MultiCurrencyRate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_ConactPositions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyIndividualTeamDetails_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportChartSector.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Validate_Company.sql" />
+    <Build Include="dbo\Stored Procedures\proc_MultiCurrencyRate_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_ContactDepartments.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyInterestSearch_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportMovements.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Validate_IndividualName.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Outlook_Email_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_ContactIndividual.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyLogByCompanyId_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportMovementsV1.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_valuation_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Outlook_EmailTo_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_ContactType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyLogById_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_valuation_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Outlook_Meeting_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_ContactTypePermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_companyoptional_get.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportTotalCommitments.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Activities_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_perform_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_Country.sql" />
+    <Build Include="dbo\Stored Procedures\proc_companyOptionalBis_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundReportKeyIndicator.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Bank_Details_GET.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_perform_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_Currency.sql" />
+    <Build Include="dbo\Stored Procedures\proc_companyOptionalBis_GetEconomicBeneficairies.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundReportNavGrid.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Carried_Intreset_GET.sql" />
+    <Build Include="dbo\Stored Procedures\_GetPortfolioInfo.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_All_Report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_Deal_Target.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanyQuickSearch_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundReportNavGridV1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Cash_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\asd.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_DealTeam_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_DealExternalTask.sql" />
+    <Build Include="dbo\Stored Procedures\proc_CompanySearch_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetGeneralOperation_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Cash_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_AnyDataInTables.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_DebtCovenant_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_dealFundInvestor.sql" />
+    <Build Include="dbo\Stored Procedures\proc_contact_ExcelImport.sql" />
+    <Build Include="dbo\Stored Procedures\GetHoldingCompany.sql" />
+    <Build Include="dbo\Stored Procedures\proc_vehicle_Cash_SET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Applications_CreateApplication.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_DebtSecurities_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealFundNegativeInvestor.sql" />
+    <Build Include="dbo\Stored Procedures\proc_contact_report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetHoldingCompanyChilds.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Catchup_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_CheckSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_FollowOnPayment_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealIntroductionWith.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Contact_SETBulk.sql" />
+    <Build Include="dbo\Stored Procedures\GetKeyfigureYears.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_ChangePasswordQuestionAndAnswer.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_portfolio_general_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealInvestmentBackground.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactCompany_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetKYCChecklistObject.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_GET_Funds_Live.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_CreateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_portfolio_general_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_DealOfficePermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactCompanyMainComapny_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetTotalCommitmentsByFund.sql" />
+    <Build Include="dbo\Stored Procedures\GetLimitedPartnerID_Calls.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_GET_Report.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_FindUsersByEmail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealOwnership.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividual_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundQuarterlyReportFinancialReport.sql" />
+    <Build Include="dbo\Stored Procedures\GetLimitedPartnerID_Distributions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Hurdle_Rate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_FindUsersByName.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Legal_ContactIndividual_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealSecurityType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividual_GETOutlook.sql" />
+    <Build Include="dbo\Stored Procedures\GetLimitedPartnerID_FundNAV.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Legal_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetAllUsers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Legal_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_DealShareholdingType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividual_MainCompany_GET.sql" />
+    <Build Include="dbo\Stored Procedures\getlog.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Main_Activity_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetNumberOfUsersOnline.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\Proc_portfolio_legal_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_dealsourcetype.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividual_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPEmailConfig.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Portfolio_Company_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\Proc_portfolio_legal_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_dealStage.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividual_SET_BU_24122016.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPEmailConfigDetail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_SETBulk.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetPasswordWithFormat.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Legal_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_dealType.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividualRM_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPReport.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_ShareDetail_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByEmail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_LegalEvent_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_FundTeams.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactIndividualRMByIndividualId_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPReportExcel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_ShareDetail_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByName.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_LegalStructure_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_IndividualID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContactInvestor_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPTemplateConfig.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_ShareDetail_SET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByUserId.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\Proc_portfolio_list_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_Individualuser.sql" />
+    <Build Include="dbo\Stored Procedures\proc_ContenentSeachByName_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPTemplateConfigDetail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_AssetType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_ResetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Optional_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_ManagementCompanyIndividuals_Meeting.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Business_Clients_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPTemplateConfigDetailPortal.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_Country_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_SetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\Proc_portfolio_optional_report_BI_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_MCMember.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Business_Competitors_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetLPVehicles.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_DealType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UnlockUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\Proc_portfolio_optional_report_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_Menus.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Business_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetModulePermissions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_FinancialInstrument_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UpdateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Security_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_MenuTabs.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Business_Revenues_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetNumerOfShares.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_Investment_Criteria_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UpdateUserInfo.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_Module_Tabs.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_By_DealTeam_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPermissionRoleByModuleID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_PortfolioSize_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Paths_CreatePath.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Shareholder_ByPortfolio_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_Modules.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortalChart2.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_Region_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Personalization_GetApplicationId.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Shareholder_ByPortfolio_GET_V1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_Modules_Sub_Tab.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Fee_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortalUser.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Strategy_Sector_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_DeleteAllState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Shareholder_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_office.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioCostPrice.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Teams_ByVehicleID_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_FindState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Shareholder_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_get_portfolioOptional.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Investment_Types_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioEnterprise.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Vehicle_Teams_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_GetCountOfState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Shareholding_TypesofOperation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_RolePermission.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Optional_Details_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioExcel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleAlerts.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_ResetSharedState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_ShareholdingOperations_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Get_Target_Details.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Revenues_Geography_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioExcelGeneral.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibility_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_ResetUserState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Simulation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_UserControlPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Revenues_Product_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioFund2PagerKeyIndicator.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibility_SET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_GetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_SimulationDetail_GEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GET_UserControls.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Revenues_Service_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioFund2PagerOverview.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibilityRegion_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_ResetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_VariableRate_DEL.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetAllGeneralOperation.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Security_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioFundLegal.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibilityRegion_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_SetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_VariableRate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetCapitalCallReportByCapitalCallID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_SETBulk.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioFundQuarterlyReportOverview.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibilityRegion_SET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_GetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_Portfolio_Vehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetCapitalCallReportByCapitalCallID_old.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Source_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioFundReportChart.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleEligibilityType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_ResetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioCompliance_get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetCapitalCallReportByCapitalCallIDBU.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Stage_Approval_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioGeneralFunds.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleHeadquarter_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_SetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioEligibility.sql" />
+    <Build Include="dbo\Stored Procedures\Proc_getcapitalcallreportbycapitalcallidBU31May2017.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Stages_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioKeyfigure.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleLegalType_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetNumberOfInactiveProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFullyRealized.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetDatedNavPortfolio.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Status_Details_By_Deal_ID_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioKeyfigureDates.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundGeneralOperation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetdealsAutoSuggest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Status_Details_Del.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioReceivedDistributions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleQuarterlyUpdate_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetProperties.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundKeyFigureAddDel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetDealsByStatus.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Status_Details_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioReportDefaultFundInfo.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleRatio_GET.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_SetProperties.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundKeyfigureConfig_Del.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getDealSimulations.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Status_GET_ALL.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioShareholdingFunds.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_RegisterSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundKeyfigureConfig_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetDealSource.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Team_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioTransactionstructure.sql" />
+    <Build Include="dbo\Stored Procedures\proc_VehicleTeam_set.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_CreateRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundKeyfigureConfig_SET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetDealsRegions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Team_IsTeamLead_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetPortfolioValuations_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\Report_PortfolioSummary.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_DeleteRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioFundUserGet.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetdealsSearch.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deal_Vehicle_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetSameGroupPortalUsers.sql" />
+    <Build Include="dbo\Stored Procedures\ReportKeyFigures.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_GetAllRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioGeneralOperation_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getDealVehicleEligibility.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DealCompany_get.sql" />
+    <Build Include="dbo\Stored Procedures\GetShareholdingOperation_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\SetBlockedGroupPermission.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_RoleExists.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioGrid_ExportExcel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetDistributionReportByDistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Deals_Report_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetSubTabsPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\SetBlockedPermission.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Setup_RemoveAllRoleMembers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioID_ByVehicleIDAndTargetCompanyID_GET.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetEligibileFund.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DealSimulation_Del.sql" />
+    <Build Include="dbo\Stored Procedures\GetTableColumns.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultipleLP.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Setup_RestorePermissions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioKeyFigureAddDel.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetFundsRegions.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DealSimulation_SET.sql" />
+    <Build Include="dbo\Stored Procedures\GetTabsPermissions.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultipleLPFx.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UnRegisterSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioOPCVM_Get.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetindividualCompanyInfo.sql" />
+    <Build Include="dbo\Stored Procedures\proc_dealStagePermission_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnderlyingInvestments.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultiplePortfolio.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Users_CreateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPartiallyRealized.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetIRRandMultiple_Report.sql" />
+    <Build Include="dbo\Stored Procedures\proc_dealStagePermission_set.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnderlyingInvestmentsKeyFigures_ExcelPlugin.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultiplePortfolioFx.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_Users_DeleteUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceExits_Vehicle.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getKeyFigureSimulations.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DEL_Individualuser.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnderlyingKeyFiguresReport.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultipleVehicle.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_AddUsersToRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceForeignCurrencyGet.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetLastValuationByVehicle.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DelOutlookEmail.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnderlyingKeyFiguresReportDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SetIrrMultipleVehicleFx.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_FindUsersInRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceForeignCurrencyGet_V1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetLastValuationCarriedSponsorByVehicle.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DelOutlookEmailLinks.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnValidatedCalls.sql" />
+    <Build Include="dbo\Stored Procedures\SetPortfolioTransactionstructure.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_GetRolesForUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceForeignCurrencyGet_Vehicle.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetMeetingByLocation.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DelOutlookMeeting.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnValidatedDistribution.sql" />
+    <Build Include="dbo\Stored Procedures\test.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_GetUsersInRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceForeignCurrencyGetV1.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getOutlookEmail.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DelOutlookMeetingLinks.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnValidatedFundNAV.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateFundNavPerShare.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_IsUserInRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceGet.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getOutlookEmailLinkedTo.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Distribution_GET.sql" />
+    <Build Include="dbo\Stored Procedures\GetUserlog.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateKeyFigIncludeInReport.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_RemoveUsersFromRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceGet_Report.sql" />
+    <Build Include="dbo\Stored Procedures\proc_GetOutlookEmailPowerPivot.sql" />
+    <Build Include="dbo\Stored Procedures\proc_Distribution_GET_By_DistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleClosing.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateMainOffice.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_WebEvent_LogEvent.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceGet_Vehicle.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getOutlookMeeting.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DistributionLimitedPartner_Get.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleDocumentType.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateTargetIsMainDeal.sql" />
+    <Build Include="dbo\Stored Procedures\AssignPortfolioFunds.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceGettest.sql" />
+    <Build Include="dbo\Stored Procedures\proc_getPortfolioByExactKey.sql" />
+    <Build Include="dbo\Stored Procedures\proc_DistributionPortfolioCompany_GET_By_DistributionID.sql" />
+    <Build Include="dbo\Stored Procedures\GetVehicleLegalCompany.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetErrorInfo.sql" />
+    <Build Include="dbo\Stored Procedures\BI_Company.sql" />
+    <Build Include="dbo\Stored Procedures\proc_PortfolioPerformanceGetV1.sql" />
+    <Build Include="dbo\User Defined Types\ShoType.sql" />
+  </ItemGroup>
+</Project>

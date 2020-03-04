@@ -1,0 +1,2 @@
+﻿CREATE USER [NT SERVICE\Winmgmt] FOR LOGIN [NT SERVICE\Winmgmt];
+

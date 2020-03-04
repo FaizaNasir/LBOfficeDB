@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[tbl_CapitalCall] (
+    [CapitalCallID]      INT             IDENTITY (1, 1) NOT NULL,
+    [CallName]           VARCHAR (50)    NULL,
+    [FundID]             INT             NULL,
+    [DueDate]            DATETIME        NULL,
+    [Active]             BIT             NULL,
+    [CreatedBy]          VARCHAR (50)    NULL,
+    [CreatedDateTime]    DATETIME        NULL,
+    [ModifiedBy]         VARCHAR (50)    NULL,
+    [ModifiedDateTime]   DATETIME        NULL,
+    [TotalAmount]        DECIMAL (18, 5) NULL,
+    [IsBreakDown]        BIT             NULL,
+    [CallDate]           DATETIME        NULL,
+    [ClosingID]          INT             NULL,
+    [IsApproved1]        BIT             NULL,
+    [Log1]               VARCHAR (1000)  NULL,
+    [IsApproved2]        BIT             NULL,
+    [Log2]               VARCHAR (1000)  NULL,
+    [TotalValidationReq] INT             NULL,
+    [UserRole1]          VARCHAR (1000)  NULL,
+    [UserRole2]          VARCHAR (1000)  NULL,
+    [CallNameFr]         VARCHAR (50)    NULL,
+    [DocStatus]          INT             NULL,
+    [Notes]              VARBINARY (MAX) NULL,
+    [NotesFR]            VARBINARY (MAX) NULL,
+    CONSTRAINT [PK_tbl_CaptialCall] PRIMARY KEY CLUSTERED ([CapitalCallID] ASC)
+);
+
