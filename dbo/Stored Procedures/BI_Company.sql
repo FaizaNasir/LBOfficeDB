@@ -2,7 +2,7 @@
 AS
     BEGIN
         SELECT DISTINCT 
-               '----General----' '----General----', 
+               '----General123----' '----General----', 
                cc.CompanyContactID ID, 
                ISNULL(cc.CompanyName, '') 'Company name', 
                ISNULL(dbo.[F_GetCompanyTypeNames](cc.companycontactid), '') 'Company type',
