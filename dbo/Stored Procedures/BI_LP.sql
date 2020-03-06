@@ -1,7 +1,7 @@
 ﻿CREATE PROC [dbo].[BI_LP]
 AS
     BEGIN
-        SELECT DISTINCT 
+        SELECT DISTINCT ----General123456
                FundName 'Fund name', 
                t.ObjectID 'ID', 
                LPName 'LP name',

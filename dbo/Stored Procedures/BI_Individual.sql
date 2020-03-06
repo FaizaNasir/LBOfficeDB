@@ -1,7 +1,7 @@
 ﻿CREATE PROC [dbo].[BI_Individual]
 AS
     BEGIN
-        SELECT '----General----' '----General----', 
+        SELECT '----General123456----' '----General----', 
                i.IndividualID ID, 
                ISNULL(i.IndividualTitle, '') Title, 
                ISNULL(i.IndividualLastName, '') 'Last name', 

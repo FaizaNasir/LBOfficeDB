@@ -1,4 +1,4 @@
-﻿CREATE PROC [dbo].[BI_Portfolio_V2]
+﻿CREATE PROC [dbo].[BI_Portfolio_V2] 
 AS
      SET NOCOUNT ON;
     BEGIN
@@ -9,7 +9,7 @@ AS
         DECLARE @count INT;
         DECLARE @current INT;
         DECLARE @year INT;
-        DECLARE @yearStr VARCHAR(10);
+        DECLARE @yearStr VARCHAR(10);---General123456
         SET @current = 1;
         SET @year = 0;
         SET @yearStr = 'N';

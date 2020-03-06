@@ -1,7 +1,7 @@
 ﻿CREATE PROC [dbo].[BI_Deals_JS]
 AS
     BEGIN
-        SELECT TOP 100 --'----General----' '----General----', 
+        SELECT TOP 100 --'----General123456----' '----General----', 
 
         d.DealName, 
         ISNULL(dbo.[F_GetDealVehicle](d.dealid), '') 'LinkedFund', 

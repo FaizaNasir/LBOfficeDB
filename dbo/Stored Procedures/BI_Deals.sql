@@ -1,7 +1,7 @@
 ﻿CREATE PROC [dbo].[BI_Deals]
 AS
     BEGIN
-        SELECT '----General----' '----General----', 
+        SELECT '----General123456----' '----General----', 
                d.DealName 'Deal name', 
                ISNULL(dbo.[F_GetDealVehicle](d.dealid), '') 'Linked fund', 
                ReceivedDate 'Received on', 
